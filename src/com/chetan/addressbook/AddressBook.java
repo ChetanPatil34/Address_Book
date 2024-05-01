@@ -38,6 +38,31 @@ public class AddressBook {
         System.out.println("Email id :"+contact.getEmail());
 
     }
+    public void editContact(){
+        System.out.println("Enter the First Number to Edit Contact :");
+        String fName = sc.next();
+        if(fName.equals(contact.getFirstName())){
+            System.out.println("Contact Found.");
+
+            System.out.println("Enter the Last Name :");
+            contact.setLastName(sc.next());
+            System.out.println("Enter the Address :");
+            contact.setAddress(sc.next());
+            System.out.println("Enter the City :");
+            contact.setCity(sc.next());
+            System.out.println("Enter the State :");
+            contact.setState(sc.next());
+            System.out.println("Enter the Zip Code :");
+            contact.setZip(sc.next());
+            System.out.println("Enter the Phone Number :");
+            contact.setPhoneNumber(sc.next());
+            System.out.println("Enter the Email ID :");
+            contact.setEmail(sc.next());
+        }
+        else {
+            System.out.println("Given Name of Contact is Not Found.");
+        }
+    }
     public static void main(String []args)
     {
 
@@ -45,6 +70,8 @@ public class AddressBook {
 
         AddressBook addressBook = new AddressBook();
         addressBook.addContact();
+        addressBook.display();
+        addressBook.editContact();
         addressBook.display();
     }
 }
