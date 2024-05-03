@@ -63,6 +63,16 @@ public class AddressBook {
             System.out.println("Given Name of Contact is Not Found.");
         }
     }
+    public void deleteContact(){
+        System.out.println("Enter the First Name delete the Contact");
+        String fName = sc.next();
+        if(fName.equals(contact.getFirstName())){
+            System.out.println("Contact is Found");
+        }
+        else {
+            System.out.println("Contact not Found");
+        }
+    }
     public static void main(String []args)
     {
 
@@ -72,6 +82,8 @@ public class AddressBook {
         addressBook.addContact();
         addressBook.display();
         addressBook.editContact();
+        addressBook.display();
+        addressBook.deleteContact();
         addressBook.display();
     }
 }
